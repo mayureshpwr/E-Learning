@@ -1,0 +1,93 @@
+<!-- my_profile.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Add additional styles here if needed */
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="container">
+            <h1 class="logo">E-Learning Platform</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="/dashboard/dashboard.html">Dashboard</a></li>
+                    <li><a href="my_courses.html">My Courses</a></li>
+                    <li><a href= "/games/games.html">Games</a></li>
+                    <li><a href="my_profile.html">My Profile</a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Move the button outside of the header -->
+    <button id="view-records-button-top" onclick="openViewRecords()">View Records</button>    
+
+    <!-- My Profile Content -->
+    <div id="profile-container">
+        <div id="personal-details">
+            <h2>Personal Details</h2>
+            
+            <div id="profile-picture-container">
+                <input type="file" id="file-input" style="display: none;" accept="image/*">
+                <label for="file-input">
+                    <img id="profile-picture" src="log_images/profile.jpg" alt="Profile Picture">
+                    <div id="upload-overlay"></div>
+                </label>
+                <button id="upload-button" onclick="openUploadForm()">Upload/Change Picture</button>
+            </div>
+            <div id="username-display"></div>
+        </div>
+
+        <div id="additional-details">
+            <h2>Additional Details</h2>
+            <button onclick="openDialog()"> + Add Additional Information</button>
+        </div>
+
+        <!-- <div id="records-container">
+            <h2>My Records</h2>
+            <p>Certifications: <span id="certifications">0</span></p>
+            <p>Purchased Courses: <span id="purchased-courses">0</span></p>
+        </div> -->
+    </div>
+
+    <!-- Additional Info Dialog -->
+    <div class="dialog-overlay" id="additional-info-dialog">
+        <div class="dialog-box">
+            <h2>Add Additional Information</h2>
+            <form id="additional-info-form">
+                <!-- Additional information form -->
+                <div class="form-group">
+                    <label for="resume">Upload Resume:</label>
+                    <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx">
+                </div>
+    
+                <div class="form-group">
+                    <label for="linkedin">LinkedIn Profile:</label>
+                    <input type="text" id="linkedin" name="linkedin" placeholder="Enter LinkedIn URL">
+                </div>
+    
+                <div class="form-group">
+                    <label for="about">About You:</label>
+                    <textarea id="about" name="about" rows="6" placeholder="Tell us about your interests and share relevant links."></textarea>
+                </div>
+    
+                <div class="form-group">
+                    <button type="button" onclick="closeDialog()">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script> <!-- Load script for user's name -->
+</body>
+</html>

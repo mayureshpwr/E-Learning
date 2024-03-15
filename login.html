@@ -1,0 +1,62 @@
+<!-- login.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+    <!-- You can remove jQuery import if not used -->
+    <script src="script.js" defer></script>
+    <script src="login.js" defer></script>
+
+</head>
+<body>
+    <div class="form-box">
+        <div class="button-box">
+            <div id="btn"></div>
+            <button type="button" class="toggle-btn" id="log" onclick="" style="color: #fff;">Log In</button>
+            <button type="button" class="toggle-btn" id="reg" onclick="register()">Register</button>
+        </div>
+        <div class="social-icons">
+            <img src="images/icon/fb2.png">
+            <img src="images/icon/insta2.png">
+            <img src="images/icon/tt2.png">
+        </div>
+        <form id="login" class="input-group" action="dashboard/dashboard.html">
+            <div class="inp">
+                <img src="images/icon/user.png"><input type="text" id="username" class="form-control" placeholder="Username or Phone Number" style="width: 88%; border:none;" required="required">
+            </div>
+            <div class="inp">
+                <img src="images/icon/password.png"><input type="password" id="password" class="input-field" placeholder="Password" style="width: 88%; border: none;" required="required">
+            </div>    
+            <input type="checkbox" class="check-box">Remember Password
+            <button type="submit" class="submit-btn">Log In</button>        
+        </form>
+        <div class="other" id="other">
+				<div class="instead">
+					<h3>or</h3>
+				</div>
+				<button class="connect" onclick="google()">
+					<img src="images/icon/google.png"><span>Sign in with Google</span>
+				</button>
+			</div>
+        <form id="register" class="input-group">
+            <input type="text" class="input-field" placeholder="Full Name" required="required">
+            <input type="email" class="input-field" placeholder="Email Address" required="required">
+            <input type="password" class="input-field" placeholder="Create Password" name="psame" required="required">
+            <input type="password" class="input-field" placeholder="Confirm Password" name="psame" required="required">
+            <input type="checkbox" class="check-box" id="chkAgree" onclick="goFurther()">I agree to the Terms & Conditions
+            <button type="submit" id="btnSubmit" class="submit-btn ">Register</button>
+        </form>
+        </form>
+        
+    </div>
+
+
+    
+
+    <!-- Add an element for profile picture -->
+    <img id="profile-picture" src="#" alt="Profile Picture" style="display: none;">
+</body>
+</html>
