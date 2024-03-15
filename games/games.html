@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/games/games.css">
+
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+            <h1 class="logo">E-Learning Platform</h1>
+            <nav>
+                <ul>
+                    <li><a href="/dashboard/dashboard.html">Dashboard</a></li>
+                    <li><a href="/my_courses.html">My Courses</a></li>
+                    <li><a href= "/games/games.html">Games</a></li>
+                    <li><a href="/my_profile.html">My Profile</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div id="game1">
+            <h2>Quiz Game</h2>
+            <p>This is a quiz game where you can test your knowledge in various subjects.</p>
+            <button onclick="loadQuizGame()">Start</button>
+        </div>
+
+        <div id="game2">
+            <h2>Stone Paper Scissors</h2>
+            <p>This is a classic game of Stone, Paper, Scissors. Try your luck and strategy!</p>
+            <button onclick="startSPSGame()">Start</button>
+        </div>
+    </div>
+
+    <script>
+        function loadQuizGame() {
+            // Load quiz game content into game1 container
+            document.getElementById('game1').innerHTML = `
+                <iframe src="qindex.html" style="width: 100%; height: 500px; border: none;"></iframe>
+            `;
+            // Hide game2 container
+            document.getElementById('game2').style.display = 'none';
+        }
+
+        function startSPSGame() {
+            // Load Stone Paper Scissors game content into game2 container
+            document.getElementById('game2').innerHTML = `
+                <iframe src="Rock.html" style="width: 100%; height: 500px; border: none;"></iframe>
+            `;
+            // Hide game1 container
+            document.getElementById('game1').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
